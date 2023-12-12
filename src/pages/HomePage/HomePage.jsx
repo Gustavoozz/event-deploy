@@ -12,6 +12,12 @@ import api from "../../Services/Service";
 import Notification from "../../components/Notification/Notification";
 import { nextEventResource } from "../../Services/Service";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./HomePage.css";
+
+import { Pagination } from "swiper/modules";
 
 const HomePage = () => {
   const [nextEvents, setNextEvents] = useState([]);
