@@ -54,8 +54,18 @@ const HomePage = () => {
           {/* <Title titleText={"Próximos Eventos"} /> */}
 
           <div className="events-box">
+          <Swiper
+        slidesPerView={ window.innerWidth >= 992 ? 3 : 1 }
+        spaceBetween={20}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+        >
             {nextEvents.map((e) => {
               return (
+                <SwiperSlide>
                 <NextEvent
                   key={e.idEvento}
                   title={e.nomeEvento}
@@ -63,8 +73,10 @@ const HomePage = () => {
                   eventDate={e.dataEvento}
                   idEvent={e.idEvento}
                 />
+                </SwiperSlide>
               );
             })}
+             </Swiper>
           </div>
         </Container>
       </section>
