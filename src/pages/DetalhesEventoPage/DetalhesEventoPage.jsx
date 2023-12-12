@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import MainContent from "../../components/MainContent/MainContent";
 import Title from "../../components/Title/Title";
-import Table from "./TableEvA/TableEvA";
+
+import TableDEv from "./TableDEv/TableDEv";
 import Container from "../../components/Container/Container";
 import { Select } from "../../components/FormComponents/FormComponents";
+
 import Spinner from "../../components/Spinner/Spinner";
 import Modal from "../../components/Modal/Modal";
 import api, {
@@ -13,7 +15,7 @@ import api, {
   commentaryEventResource,
 } from "../../Services/Service";
 
-import "./EventosAlunoPage.css";
+import "./DetalhesEventoPage.css";
 import { UserContext } from "../../context/AuthContext";
 
 const EventosAlunoPage = () => {
@@ -265,7 +267,7 @@ const EventosAlunoPage = () => {
             defaultValue={tipoEvento}
             additionalClass="select-tp-evento"
           />
-          <Table
+          <TableDEv
             dados={eventos}
             fnConnect={handleConnect}
             fnShowModal={showHideModal}
