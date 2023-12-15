@@ -1,6 +1,5 @@
 import React from "react";
 import ToggleSwitch from "../../../components/Toggle/Toggle";
-// importa a biblioteca de tootips ()
 import "react-tooltip/dist/react-tooltip.css";
 // import { Tooltip } from "react-tooltip";
 

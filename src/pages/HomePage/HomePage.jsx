@@ -67,7 +67,7 @@ const HomePage = () => {
       <section className="proximos-eventos">
         <Container>
 
-          <Title titleText={"Próximos Eventos"} />
+          <Title titleText={"Next Events"} />
 
           <div className="events-box">
 

@@ -36,15 +36,15 @@ const Nav = ({ exibeNavbar, setExibeNavbar }) => {
         {userData.nome && userData.role === "Administrador" ? (
           <>
             <Link className="navbar__item" to="/tipo-eventos">
-              Tipos Evento
+              Event Types
             </Link>
             <Link className="navbar__item" to="/eventos">
-              Eventos
+              Events
             </Link>
           </>
         ) : userData.nome && userData.role === "Comum" ? (
           <Link className="navbar__item" to="/eventos-aluno">
-            Eventos
+            Events
           </Link>
         ) : null}
 

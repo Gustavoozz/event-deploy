@@ -7,7 +7,7 @@ import contatoMap  from '../../assets/images/contato-map.png';
 const ContactSection = () => {
   return (
     <section className="contato">
-      <Title titleText={"Contato"} />
+      <Title titleText={"Contact"} />
 
       <div className="contato__endereco-box">
         <img

@@ -7,7 +7,7 @@ const VisionSection = () => {
         <section className='vision'>
             <div className="vision__box">
                 <Title 
-                    titleText={"Visão"}
+                    titleText={"Vision"}
                     color='white'
                     additionalClass ='vision__title'
                 />

@@ -32,9 +32,6 @@ const DetalhesEvento = () => {
 
     
 
-
-
-
     async function loadEventsType() {
         setShowSpinner(true);
 
@@ -79,7 +76,7 @@ const DetalhesEvento = () => {
         <>
             <MainContent>
                 <Container>
-                    <Title titleText={"Detalhes"} additionalClass="custom-title" />
+                    <Title titleText={"Event Details"} additionalClass="custom-title" />
                     <br />
                         
 
