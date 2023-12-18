@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NextEvent.css";
+import { animate, glide } from "motion"
+
 
 import { Tooltip } from "react-tooltip";
 
@@ -16,8 +18,7 @@ const NextEvent = ({ title, description, eventDate, idEvent}) => {
     <article className="event-card">
       <h2 className="event-card__title">{title}</h2>
 
-      <p
-        className="event-card__description"
+      <p className="event-card__description"
         
         data-tooltip-id={idEvent}
         data-tooltip-content={description}

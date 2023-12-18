@@ -12,13 +12,13 @@ const TableDv = ({ dados, idEvento }) => {
       <thead className="tbal-data__head">
         <tr className="tbal-data__head-row tbal-data__head-row--red-color">
           <th className="tbal-data__head-title tbal-data__head-title--big">
-            Cometário
+            Commentary
           </th>
           <th className="tbal-data__head-title tbal-data__head-title--big">
-            Autor
+            Author
           </th>
           <th className="tbal-data__head-title tbal-data__head-title--big">
-            Exibe
+            Show
           </th>
         </tr>
       </thead>

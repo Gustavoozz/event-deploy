@@ -19,6 +19,7 @@ import "swiper/css/pagination";
 import "./HomePage.css";
 
 import { Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
 
 
 const HomePage = () => {
@@ -79,6 +80,7 @@ const HomePage = () => {
         }}
         modules={[Pagination]}
         className="mySwiper"
+        
         >
 
             {nextEvents.map((e) => {

@@ -10,6 +10,8 @@ import { Input, Button } from "../../components/FormComponents/FormComponents";
 import api, { eventsTypeResource } from "../../Services/Service";
 import Notification from "../../components/Notification/Notification";
 import Spinner from "../../components/Spinner/Spinner";
+import { timeline } from "motion"
+
 
 const TipoEventosPage = () => {
   
@@ -19,10 +21,13 @@ const TipoEventosPage = () => {
   const [idEvento, setIdEvento] = useState(null); //para editar, por causa do evento!
   const [tipoEventos, setTipoEventos] = useState([]); //array
   const [notifyUser, setNotifyUser] = useState(); //Componente Notification
-  const [showSpinner, setShowSpinner] = useState(false); //Spinner Loading
+  const [showSpinner, setShowSpinner] = useState(false); //Spinner Loadin
+
 
   // Função que após a página/DOM estar pronta
   useEffect(() => {
+
+   
     // define a chamada em nossa api
     async function loadEventsType() {
       setShowSpinner(true);
@@ -45,6 +50,7 @@ const TipoEventosPage = () => {
   // ***************************** CADASTRAR *****************************
   async function handleSubmit(e) {
     e.preventDefault(); //evita o submit do formulário
+
     setShowSpinner(true);
 
     if (titulo.trim().length < 3) {
@@ -68,7 +74,7 @@ const TipoEventosPage = () => {
       // avisa o usuário
       setNotifyUser({
         titleNote: "Sucesso",
-        textNote: `O título deve ter pelo menos 3 caractere`,
+        textNote: `Evento cadastrado com sucesso!`,
         imgIcon: "success",
         imgAlt:
           "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
@@ -188,7 +194,7 @@ const TipoEventosPage = () => {
   return (
     <>
       {<Notification {...notifyUser} setNotifyUser={setNotifyUser} />}
-      
+
       {/* SPINNER - Feito com position */}
       {showSpinner ? <Spinner /> : null}
       
